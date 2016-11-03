@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Challenge 3</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+
+        <!-- Latest compiled and minified Locales -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js"></script>
+                <script>
+            $(document).ready(function(){
+                $("#section2").hide();
+                $("#section3").hide();
+                $(function(){
+                $("#btnsub").click(function() {
+                    var firstName = $("#fn").val();
+                    var lastName = $("#ln").val();
+                    var City = $("#ct").val();
+                    var State = $("#st").val();
+                    var Zip = $("#zp").val();
+                    var Phone = $("#ph").val();
+                
+                    console.log("hey");
+                    $("#firstName").append(firstName);
+                    $("#lastName").append(lastName);
+                    $("#firstName2").append(firstName);
+                    $("#lastName2").append(lastName);
+                    $("#City").append(City);
+                    $("#State").append(State);
+                    $("#Zip").append(Zip);
+                    $("#PhoneNumber").append(Phone);
+                    $("#section1").hide();
+                    $("#section2").show();
+                });
+            });
+                $(function(){
+                    $("#btncon").click(function(){
+                        $("#section2").hide();
+                        $("#section3").show();
+                    })
+                })
+                    
+            });
+            
+            
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                    <div id="section1">
+                        <form id="myForm">
+                          <div class="form-group">
+                            <label for="firstName"> First Name:</label>
+                            <input type="text" id="fn" name="firstName" class="form-control" >
+                          </div>
+                          <div class="form-group">
+                            <label for="lastName">Password:</label>
+                            <input type="text" id="ln" name="lastName" class="form-control" >
+                          </div>
+
+                            <div class="form-group">
+                            <label for="City">City:</label>
+                            <input type="text" id="ct" name="City" class="form-control" >
+                          </div>
+
+                            <div class="form-group">
+                            <label for="State">State:</label>
+                            <input type="text" id="st" name="State" class="form-control" >
+                          </div>
+
+                            <div class="form-group">
+                            <label for="Zip">Zip:</label>
+                            <input type="text" id=zp name="Zip" class="form-control" >
+                          </div>
+
+                            <div class="form-group">
+                            <label for="PhoneNumber">Phone Number:</label>
+                            <input type="text" id="ph" name="PhoneNumber" class="form-control" id="PhoneNumber">
+                          </div>
+                          <button type="button" id="btnsub" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                    <div id="section2">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="firstName"></td>
+                                    <td id="lastName"></td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        <button type="button" id="btncon" class="btn btn-default">Continue</button>
+                    </div>
+                    <div id="section3">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Zip</th>
+                                <th>Phone Number</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="firstName2"></td>
+                                    <td id="lastName2"></td>
+                                    <td id="City"></td>
+                                    <td id="State"></td>
+                                    <td id="Zip"></td>
+                                    <td id="PhoneNumber"></td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        
+                    </div>
+            </div>
+        </div>
+        <script>
+            
+        </script>
+    </body>
+</html>
+    
